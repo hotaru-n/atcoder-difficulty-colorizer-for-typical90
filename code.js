@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name            AtCoder Difficulty Display
+// @name            AtCoder Difficulty Colorizer for Typical 90
 // @namespace       https://github.com/hotarunx
 // @homepage        https://github.com/hotarunx/atcoder-difficulty-colorizer-for-typical90
 // @supportURL      https://github.com/hotarunx/atcoder-difficulty-colorizer-for-typical90/issues

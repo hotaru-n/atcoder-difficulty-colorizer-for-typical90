@@ -17,16 +17,21 @@
 // ==/UserScript==
 
 (async function () {
-    // タイトルのHTML要素
+    // タイトルを色付けする
+    // タイトルのHTML要素を取得する
     const title = document.getElementsByClassName("h2")[0];
-    // タイトルの★数から対応する色を得る
-    const color = returnDifficultyColor(title.textContent);
+    // タイトルが存在するなら色付けする
+    if (title != undefined) {
+        paintColor(title);
+    }
 
     // タイトルの色を変える
     title.style.color = color;
 })();
 
-// 引数の文字列に含まれる★数に対応するカラーコードを返す
+// 問題名の難易度に対応する色のカラーコードを返す
+// テキストに含まれる★数に対応する色のカラーコードを返す
+// テキストが問題名ではない、つまりテキストに★数が含まれないならundefinedを返す
 function returnDifficultyColor(title) {
     if (title.match("★1")) return "#808080";
     if (title.match("★2")) return "#808080";
@@ -35,5 +40,17 @@ function returnDifficultyColor(title) {
     if (title.match("★5")) return "#00C0C0";
     if (title.match("★6")) return "#0000FF";
     if (title.match("★7")) return "#C0C000";
-    return "#000000";
+    return undefined;
+}
+
+// HTML要素を色付けする
+function paintColor(element) {
+    // 色を取得する
+    const color = returnDifficultyColor(element.textContent);
+    // もしこのHTML要素が問題名ではないなら関数を終了する
+    if (color === undefined) {
+        return;
+    }
+    // 色付けする
+    element.style.color = color;
 }

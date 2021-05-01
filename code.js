@@ -3,11 +3,10 @@
 // @namespace       https://github.com/hotarunx
 // @homepage        https://github.com/hotarunx/atcoder-difficulty-colorizer-for-typical90
 // @supportURL      https://github.com/hotarunx/atcoder-difficulty-colorizer-for-typical90/issues
-// @version         0.0.1
+// @version         0.0.2
 // @description     競プロ典型 90 問の問題ページのタイトルを色付けします
 // @author          hotarunx
-// @match           https://atcoder.jp/contests/typical90/tasks/*
-// @exclude         https://atcoder.jp/contests/typical90/tasks
+// @match           https://atcoder.jp/contests/typical90/*
 // @grant           none
 // @license         MIT
 //
@@ -25,8 +24,19 @@
         paintColor(title);
     }
 
-    // タイトルの色を変える
-    title.style.color = color;
+    // aタグを色付けする
+    const a_elements = document.getElementsByTagName("a");
+    // すべてのaタグを色付けする
+    for (const element of a_elements) {
+        paintColor(element);
+    }
+
+    // tdタグを色付けする
+    const td_elements = document.getElementsByTagName("td");
+    // すべてのtdタグを色付けする
+    for (const element of td_elements) {
+        paintColor(element);
+    }
 })();
 
 // 問題名の難易度に対応する色のカラーコードを返す

@@ -1,6 +1,6 @@
 # AtCoder Difficulty Colorizer for Typical 90
 
-![overview](https://raw.githubusercontent.com/hotarunx/atcoder-difficulty-colorizer-for-typical90/master/overview.png)
+![overview](https://raw.githubusercontent.com/hotarunx/atcoder-difficulty-colorizer-for-typical90/main/overview.png)
 
 インストールは[こちら](https://greasyfork.org/ja/scripts/425463-atcoder-difficulty-colorizer-for-typical-90)。
 

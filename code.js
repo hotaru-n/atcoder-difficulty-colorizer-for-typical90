@@ -3,10 +3,11 @@
 // @namespace       https://github.com/hotarunx
 // @homepage        https://github.com/hotarunx/atcoder-difficulty-colorizer-for-typical90
 // @supportURL      https://github.com/hotarunx/atcoder-difficulty-colorizer-for-typical90/issues
-// @version         0.0.2
+// @version         0.0.3
 // @description     競プロ典型 90 問の問題ページのタイトルを色付けします
 // @author          hotarunx
 // @match           https://atcoder.jp/contests/typical90/*
+// @match           https://kenkoooo.com/atcoder/*
 // @grant           none
 // @license         MIT
 //
@@ -15,29 +16,31 @@
 //
 // ==/UserScript==
 
-(async function () {
-    // タイトルを色付けする
-    // タイトルのHTML要素を取得する
-    const title = document.getElementsByClassName("h2")[0];
-    // タイトルが存在するなら色付けする
-    if (title != undefined) {
-        paintColor(title);
-    }
+window.addEventListener('load', function() {
+    setTimeout(()=>{
+        // タイトルを色付けする
+        // タイトルのHTML要素を取得する
+        const title = document.getElementsByClassName("h2")[0];
+        // タイトルが存在するなら色付けする
+        if (title != undefined) {
+            paintColor(title);
+        }
 
-    // aタグを色付けする
-    const a_elements = document.getElementsByTagName("a");
-    // すべてのaタグを色付けする
-    for (const element of a_elements) {
-        paintColor(element);
-    }
+        // aタグを色付けする
+        const a_elements = document.getElementsByTagName("a");
+        // すべてのaタグを色付けする
+        for (const element of a_elements) {
+            paintColor(element);
+        }
 
-    // tdタグを色付けする
-    const td_elements = document.getElementsByTagName("td");
-    // すべてのtdタグを色付けする
-    for (const element of td_elements) {
-        paintColor(element);
-    }
-})();
+        // tdタグを色付けする
+        const td_elements = document.getElementsByTagName("td");
+        // すべてのtdタグを色付けする
+        for (const element of td_elements) {
+            paintColor(element);
+        }
+    }, 1000);
+});
 
 // 問題名の難易度に対応する色のカラーコードを返す
 // テキストに含まれる★数に対応する色のカラーコードを返す

@@ -1,8 +1,8 @@
-# AtCoder Difficulty Colorizer for Typical 90
+# [deprecated]AtCoder Difficulty Colorizer for Typical 90
 
 ## 注意
 
-[atcoder\-difficulty\-display](https://greasyfork.org/ja/scripts/397185-atcoder-difficulty-display) にも同機能を実装したので、そちらを使うことを推奨。
+[atcoder\-difficulty\-display](https://greasyfork.org/ja/scripts/397185-atcoder-difficulty-display) にも同機能を実装したので、そちらを使用してください。
 
 ![overview](https://raw.githubusercontent.com/hotarunx/atcoder-difficulty-colorizer-for-typical90/main/overview.png)
 
